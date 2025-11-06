@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundarraj Venugopal - Senior Test Lead & Automation Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        /* Sections */
+        section {
+            background: white;
+            margin: 40px auto;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        /* Summary */
+        .summary p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .skill-category li:before {
+            content: "▹ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .experience-title {
+            flex: 1;
+        }
+
+        .experience-title h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .experience-date {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .experience-item li {
+            padding: 10px 0 10px 25px;
+            position: relative;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .experience-item li:before {
+            content: "●";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Education */
+        .education-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .education-item h3 {
+            color: #333;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .education-item p {
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .education-date {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+
+            .experience-date {
+                align-self: flex-start;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sundarraj Venugopal</h1>
+            <p>Senior Test Lead & Automation Engineer</p>
+            <div class="contact-info">
+                <a href="mailto:sundarrvenu@gmail.com">
+                    <span>✉</span> sundarrvenu@gmail.com
+                </a>
+                <a href="tel:+919003972133">
+                    <span>📱</span> +91 9003972133
+                </a>
+                <a>
+                    <span>📍</span> Chennai, India
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#summary">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="summary" class="summary">
+            <h2>About Me</h2>
+            <p>
+                Senior Test Lead and Automation Engineer with 8+ years of experience in quality assurance and automation for high-performance web applications. Expertise in advanced testing frameworks and automation tools, ensuring reliable software delivery. Proven track record in leading cross-functional teams and optimizing test processes in fast-paced environments. Strong technical skills combined with strategic leadership drive end-to-end testing excellence.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Playwright</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Test Automation Tools</h3>
+                    <ul>
+                        <li>Selenium</li>
+                        <li>Cypress</li>
+                        <li>Robot Framework</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Database Management</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>API Testing Tools</h3>
+                    <ul>
+                        <li>Postman</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Senior Team Leader</h3>
+                        <p class="company">Mavens-i Softech Solutions, Chennai, IN</p>
+                    </div>
+                    <span class="experience-date">May 2019 - Present</span>
+                </div>
+                <ul>
+                    <li>Trained on Alstom traffic control projects for major cities: Melbourne, Seattle, Eglinton</li>
+                    <li>Led cross-functional teams in Traffic Overview and Reporting initiatives at Alstom</li>
+                    <li>Managed design, implementation, and monitoring of Alstom traffic systems to enhance efficiency and safety</li>
+                    <li>Applied solid design principles and modern engineering practices to enhance Alstom system architectures</li>
+                    <li>Developed automated reporting tools to improve data analysis and visualization across traffic management systems</li>
+                    <li>Oversaw project resources, budgets, and timelines to ensure quality and compliance in all Alstom projects</li>
+                    <li>Collaborated with Alstom clients to troubleshoot system issues and optimize performance for continuous improvement</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Senior Associate Tester</h3>
+                        <p class="company">Mavens-i Softech Solutions, Chennai</p>
+                    </div>
+                    <span class="experience-date">Feb 2021 - May 2023</span>
+                </div>
+                <ul>
+                    <li>Led testing initiatives for Renault Nissan's Digital Vehicle Tracking Application, ensuring accuracy and reliability in vehicle data management</li>
+                    <li>Conducted functional, API, and backend testing using Selenium, Robot Framework, and Postman to validate system performance</li>
+                    <li>Executed performance and load testing to improve system scalability and responsiveness</li>
+                    <li>Collaborated with development teams to identify, reproduce, and resolve critical defects and performance issues</li>
+                    <li>Prepared comprehensive test cases, reports, and documentation, adhering to QA standards and Agile methodologies</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Senior Associate Tester</h3>
+                        <p class="company">Mavens-i Softech Solutions, Chennai</p>
+                    </div>
+                    <span class="experience-date">May 2019 - Feb 2021</span>
+                </div>
+                <ul>
+                    <li>Conducted comprehensive end-to-end testing for Financial Services Platform built on PHP Laravel, ensuring secure transaction processing</li>
+                    <li>Performed API and backend validation of RESTful Web Services to verify data integrity and security compliance</li>
+                    <li>Led functional and regression testing for multilingual NLTH website, guaranteeing optimal performance across global regions</li>
+                    <li>Designed and automated test cases with Selenium, Robot Framework, and Postman to validate key business workflows</li>
+                    <li>Collaborated with developers to identify and resolve defects, security vulnerabilities, and performance bottlenecks prior to release</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Associate Tester</h3>
+                        <p class="company">Hurix Systems Private Ltd, Chennai</p>
+                    </div>
+                    <span class="experience-date">Jun 2017 - May 2019</span>
+                </div>
+                <ul>
+                    <li>Developed online platform for study materials, enhancing communication between students and staff</li>
+                    <li>Facilitated management's access to comprehensive information on enrolled students</li>
+                    <li>Enabled staff to upload notes, assign tests, and monitor student progress</li>
+                    <li>Provided students with secure access to tests and learning materials using unique credentials</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <p class="education-date">June 2011</p>
+                <h3>Master of Science in Master of Computer Application</h3>
+                <p>Adhiparasakthi Engineering College, Kanchipuram</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sundarraj Venugopal. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
